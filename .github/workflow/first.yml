@@ -1,0 +1,29 @@
+name : Shristi 
+age : 23
+address:
+city: Meerut
+ state: Uttar Pradesh
+ country : India
+ social_media :
+ - facebook
+ - instagram
+ - twitter
+ testing : |
+ this is multiline string 
+ my first yml file
+ new file
+ 
+ # my first yml file
+name: My First Automation
+
+on: [push] 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # GitHub ke server par chalega
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 # Aapka code server par download karega
+
+      - name: Run a greeting
+        run: echo "Hello Shristi, your first GitHub Action is successful!"
