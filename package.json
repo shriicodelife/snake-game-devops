@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "test": "jest --coverage"
+    "build": "mkdir -p dist && cp index.html index.js style.css app.js dist/"
   },
   "devDependencies": {
     "jest": "^30.0.0"
