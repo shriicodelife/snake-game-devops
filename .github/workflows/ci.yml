@@ -1,0 +1,35 @@
+# This name appears in the GitHub Actions tab.
+name: Node CI
+
+on:
+  push:
+    # Run this workflow only when code is pushed to the main branch.
+    branches:
+      - main
+
+jobs:
+  # This is one job named "test".
+  test:
+    # GitHub gives a Linux machine to run the job.
+    runs-on: ubuntu-latest
+
+    steps:
+      # Download your repository code into the runner.
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Install Node.js so npm commands work.
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          # Use Node.js version 20.
+          node-version: 20
+          cache: npm
+
+      # Install dependencies from package-lock.json.
+      - name: Install dependencies
+        run: npm ci
+
+      # Execute the test script from package.json.
+      - name: Run tests
+        run: npm test

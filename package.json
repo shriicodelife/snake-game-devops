@@ -1,0 +1,11 @@
+{
+  "name": "snake-game-main",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "devDependencies": {
+    "jest": "^30.0.0"
+  }
+}
