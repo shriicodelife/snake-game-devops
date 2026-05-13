@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage",
     "build": "mkdir -p dist && cp index.html index.js style.css app.js dist/"
   },
   "devDependencies": {
