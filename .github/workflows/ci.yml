@@ -33,3 +33,14 @@ jobs:
       # Execute the test script from package.json.
       - name: Run tests
         run: npm test
+
+      # Upload selected project files as a GitHub Actions artifact.
+      - name: Upload snake game artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: snake-game-files
+          path: |
+            index.html
+            index.js
+            app.js
+            package.json
