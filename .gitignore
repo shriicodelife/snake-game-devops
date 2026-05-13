@@ -1,3 +1,5 @@
 password/
 passwords/
 *.css
+node_modules/
+coverage/
